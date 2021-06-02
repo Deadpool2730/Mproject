@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <h1 style="color: goldenrod; text-transform: capitalize;">emergency vehicle route clearing system</h1>
+    <script src="https://www.gstatic.com/firebasejs/8.6.3/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.3/firebase-firestore.js"></script>
+</head>
+<body>
+    <nav>
+        
+        <ul>
+            
+        <li>
+            <a  href="https://api.thingspeak.com/update?api_key=GQ4GELTTZT4OONHA&field1=1">Road 1</a>
+            <span></span><span></span><span></span><span></span>
+        </li>
+        <li>
+            <a  href="https://api.thingspeak.com/update?api_key=GQ4GELTTZT4OONHA&field1=2">Road 2</a>
+            <span></span><span></span><span></span><span></span>
+        </li>
+        <li>
+            <a  href="https://api.thingspeak.com/update?api_key=GQ4GELTTZT4OONHA&field1=3">Road 3</a>
+            <span></span><span></span><span></span><span></span>
+            <!-- <a target="_blank" href="https://api.thingspeak.com/update?api_key=GQ4GELTTZT4OONHA&field1=3">Road 3</a>
+            <span></span><span></span><span></span><span></span> -->
+        </li>
+        <li>
+            <a  href="https://api.thingspeak.com/update?api_key=GQ4GELTTZT4OONHA&field1=4">Road 4</a>
+            <span></span><span></span><span></span><span></span>
+        </li>
+        <li>
+            <a data-reset>RESET</a>
+            <span></span><span></span><span></span><span></span>
+        </li>
+        <!-- <li> -->
+            
+            <button class="shareBtn" >Send Location</button>
+            <!-- <span></span><span></span><span></span><span></span>
+        </li> -->
+        </ul>
+        <!-- <p>Click the button to get your coordinates.</p> -->
+
+    <!-- <button class="shareBtn" >Try It</button> -->
+
+    <p id="demo"></p>
+    <!-- <input class="name" placeholder="name"> -->
+    </nav>
+    
+
+    <script>
+          // Your web app's Firebase configuration
+        var firebaseConfig = {
+        apiKey: "AIzaSyA_3j-3Tn0NmaBzIpW6eFpfsg2XsLaIAU4",
+        authDomain: "liveshare-a65dc.firebaseapp.com",
+        projectId: "liveshare-a65dc",
+        storageBucket: "liveshare-a65dc.appspot.com",
+        messagingSenderId: "180473888503",
+        appId: "1:180473888503:web:827ecf316e0873eff15df2"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        
+        const db = firebase.firestore();
+        
+        db.settings({timestampsInSnapshots:true});
+        
+        </script>
+        <script src="./app.js" defer></script>
+</body>
+</html>
